@@ -15,6 +15,7 @@ function TvCard(props) {
         src={props.img + props.data.poster_path}
         id={props.id}
         onClick={handlerDetails}
+        alt={props.data.name}
       />
       <div className="title" id={props.id} onClick={handlerDetails}>
         {props.data.name}

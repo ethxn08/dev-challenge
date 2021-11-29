@@ -6,7 +6,11 @@ function DetailsComponent(props) {
   return (
     <div className="details">
       <div className="details-image">
-        <img src={IMG_API + props.data.poster_path} id={props.id} />
+        <img
+          src={IMG_API + props.data.poster_path}
+          id={props.id}
+          alt={props.data.id}
+        />
       </div>
       <div className="details-title">
         <h1>
@@ -29,7 +33,12 @@ function DetailsComponent(props) {
           {props.data.release_date}
         </p>
 
-        <a href={props.data.homepage} target="_blank" className="Link-button">
+        <a
+          href={props.data.homepage}
+          target="_blank"
+          rel="noreferrer"
+          className="Link-button"
+        >
           Go To !
         </a>
       </div>

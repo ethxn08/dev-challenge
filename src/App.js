@@ -1,6 +1,6 @@
 // eslint-disable
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Details from "./Pages/Details";
 import Home from "./Pages/Home";
 import Movies from "./Pages/Movies/Movies";

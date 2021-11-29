@@ -12,7 +12,7 @@ function Details() {
   useEffect(() => {
     setId(params.id);
     setMovieOrTv(params.moviesOrTv);
-    if (ids != "") {
+    if (ids !== "") {
       const DETAILS_API = `https://api.themoviedb.org/3/${movieOrTv}/${ids}?api_key=60431590bdfc3f044c46d9b42735282b`;
       fetch(DETAILS_API)
         .then((res) => res.json())
@@ -20,7 +20,7 @@ function Details() {
           setDetails(data);
         });
     }
-  }, [ids, movieOrTv]);
+  }, [params.id, params.movieOrTv]);
 
   return (
     <div>

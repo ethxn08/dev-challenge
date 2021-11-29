@@ -1,0 +1,263 @@
+body {
+  margin: 0;
+  padding: 5px;
+  box-sizing: border-box;
+  left: 0;
+  background-color: #242424;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+a {
+  color: white;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+a:hover {
+  color: crimson;
+  background-size: 100% 2px;
+}
+.nav {
+  width: 100%;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.logo-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+}
+.nav-logo {
+  width: 55px;
+  height: 55px;
+  margin-right: 10px;
+}
+.links-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+}
+.movies-grid {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.movie-card {
+  width: 100%;
+  height: 48vh;
+  text-align: center;
+  margin-top: 18px;
+  position: relative;
+}
+.rated-card {
+  top: 5px;
+  left: 80% !important;
+  background-color: #2424249d;
+  width: auto;
+  padding: 4px;
+  z-index: 1;
+  position: absolute;
+  border-radius: 10px;
+  min-width: 32px;
+  min-height: 32px;
+  text-align: center;
+}
+.movie-card > img {
+  object-fit: cover;
+  width: 90%;
+  height: 88%;
+  z-index: 0;
+  -webkit-box-shadow: 0px 0px 28px 3px #7d0000;
+  box-shadow: 0px 0px 28px 3px #7d0000;
+  border-radius: 5px;
+}
+.carousel {
+  margin-top: 65px !important;
+  width: 80% !important;
+  height: auto !important;
+}
+.carousel-center {
+  width: 80%;
+  margin-left: 10%;
+}
+.carousel-center > img {
+  width: 100%;
+  object-position: center;
+  object-fit: contain;
+  -webkit-box-shadow: 0px 0px 28px 3px #7d0000;
+  box-shadow: 0px 0px 28px 3px #7d0000;
+  border-radius: 5px;
+  height: 80% !important;
+}
+.title {
+  width: 100%;
+  height: 12%;
+  background-color: crimson;
+  -webkit-box-shadow: 0px 0px 28px 3px #7d0000;
+  box-shadow: 0px 0px 28px 3px #7d0000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  border-radius: 5px;
+}
+.movies-section {
+  margin-top: 65px !important;
+  margin-bottom: 65px !important;
+  width: 100%;
+}
+.movies-section-title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+}
+.slick-arrow {
+  display: none !important;
+}
+.Link-button {
+  font-size: 32px;
+}
+.movies-content {
+  margin-top: 15px !important;
+  width: 90% !important;
+  height: 100%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.movie-cover {
+  width: 30%;
+  height: 100%;
+}
+.img-center {
+  width: 80%;
+  margin-left: 5%;
+  height: 30%;
+}
+.img-center > img {
+  width: 100%;
+  height: 100% !important;
+  object-position: center;
+  object-fit: contain;
+  border-radius: 5px;
+  height: 100% !important;
+}
+.genres {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+.hidden {
+  display: none !important;
+}
+.details {
+  width: 90%;
+  height: auto;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  position: relative;
+}
+.details-image {
+  width: 40%;
+  height: auto;
+  z-index: 0;
+}
+.details-image > img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+}
+.details-title {
+  z-index: 0;
+  margin-left: 15px;
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 28px;
+}
+@media (max-width: 350px) {
+  .movie-card {
+    height: 38vh;
+    font-size: 5px !important;
+  }
+  .rated-card {
+    font-size: 15px !important;
+    left: 65% !important;
+  }
+}
+
+@media (max-width: 666px) {
+  .title {
+    font-size: 10px;
+  }
+  .nav-logo {
+    display: none;
+  }
+  .rated-card {
+    font-size: 18px;
+    left: 80% !important;
+  }
+  .details {
+    width: 90%;
+    height: 90vh;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .details-title {
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+  }
+  .details-image {
+    width: 80%;
+    margin-left: 10%;
+    height: 400px;
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 1195px) {
+  .carousel {
+    margin-top: 65px !important;
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 10px;
+  }
+  .title {
+    font-size: 13px;
+  }
+  .rated-card {
+    font-size: 20px;
+    left: 80%;
+  }
+}

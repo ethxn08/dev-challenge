@@ -20,7 +20,7 @@ function Details() {
           setDetails(data);
         });
     }
-  }, [params.id, params.movieOrTv]);
+  }, [params.id, params.moviesOrTv]);
 
   return (
     <div>

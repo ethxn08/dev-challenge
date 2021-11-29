@@ -159,7 +159,8 @@ a:hover {
   height: 100% !important;
 }
 .genres {
-  width: 100%;
+  width: 80%;
+  margin-left: 10%;
   height: auto;
   margin-top: 50px;
 }

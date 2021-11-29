@@ -1,6 +1,6 @@
 import React from "react";
+import { IMG_API } from "../../services/index";
 
-const IMG_API = "https://image.tmdb.org/t/p/w1280";
 function DetailsComponent(props) {
   console.log(props.data);
   return (

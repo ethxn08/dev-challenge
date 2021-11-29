@@ -5,17 +5,13 @@ import { Link } from "react-router-dom";
 import MovieCard from "../../Components/MovieCard";
 import { Row, Col } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
-
-const CAROUSEL_API =
-  "https://api.themoviedb.org/3/trending/movie/day?api_key=60431590bdfc3f044c46d9b42735282b&page=1";
-const IMG_API = "https://image.tmdb.org/t/p/w1280";
-const MOVIE_API =
-  "https://api.themoviedb.org/3/trending/movie/week?api_key=60431590bdfc3f044c46d9b42735282b&page=2";
-
-const TV_API =
-  "https://api.themoviedb.org/3/trending/tv/week?api_key=60431590bdfc3f044c46d9b42735282b&page=2";
-const GENRES_API =
-  "https://api.themoviedb.org/3/genre/movie/list?api_key=60431590bdfc3f044c46d9b42735282b&page=1";
+import {
+  CAROUSEL_API,
+  IMG_API,
+  MOVIE_API,
+  TV_API,
+  GENRES_API,
+} from "../../services/index";
 
 function Home() {
   const [carousel, setCarousel] = useState([]);
@@ -95,6 +91,11 @@ function Home() {
     const id = e.target.id;
     history.push("/details/movie/" + id);
   };
+  const handlerDetailsTv = (e) => {
+    console.log(e.target.id);
+    const id = e.target.id;
+    history.push("/details/tv/" + id);
+  };
   const carouselContent = carousel.slice(0, 5).map((item, index) => {
     return (
       <div
@@ -137,9 +138,19 @@ function Home() {
 
   const contentTv = tv.slice(0, 4).map((tv, index) => {
     return (
-      <div key={tv.title} className="movie-cover">
-        <div className="img-center">
-          <img src={IMG_API + tv.poster_path} alt={tv.title} />
+      <div
+        key={tv.title}
+        className="movie-cover"
+        id={tv.id}
+        onClick={handlerDetailsTv}
+      >
+        <div className="img-center" id={tv.id} onClick={handlerDetailsTv}>
+          <img
+            src={IMG_API + tv.poster_path}
+            alt={tv.title}
+            id={tv.id}
+            onClick={handlerDetailsTv}
+          />
         </div>
       </div>
     );

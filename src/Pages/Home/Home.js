@@ -3,7 +3,7 @@ import Navbar from "../../Components/Navbar";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import MovieCard from "../../Components/MovieCard";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 
 const CAROUSEL_API =
@@ -146,7 +146,7 @@ function Home() {
   });
 
   const MovieAndTvSections = () => {
-    if (genreActive != "active") {
+    if (genreActive !== "active") {
       return (
         <div>
           {/*Movie Section*/}

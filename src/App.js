@@ -1,5 +1,5 @@
+// eslint-disable
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./Components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Details from "./Pages/Details";
 import Home from "./Pages/Home";

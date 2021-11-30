@@ -30,7 +30,9 @@ function DetailsComponent(props) {
 
         <p>
           <strong>Release Date: </strong>
-          {props.data.release_date}
+          {props.data.release_date !== undefined
+            ? props.data.release_date
+            : props.data.last_air_date}
         </p>
 
         <a

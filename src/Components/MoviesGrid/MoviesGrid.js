@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import MovieCard from "../MovieCard";
 import { Row, Col } from "react-bootstrap";
-import { IMG_API, FEATURED_API } from "../../services/index";
-
+import { IMG_API, API_KEY } from "../../services/index";
+const FEATURED_API = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&${API_KEY}&page=1`;
 function MoviesGrid(props) {
   const [movies, setMovies] = useState([]);
 

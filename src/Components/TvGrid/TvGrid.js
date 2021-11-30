@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import TvCard from "../TvCard";
 import { Row, Col } from "react-bootstrap";
-import { IMG_API, FEATURED_API } from "../../services/index";
-
+import { IMG_API, API_KEY } from "../../services/index";
+const FEATURED_API = `https://api.themoviedb.org/3/discover/tv?sort_by=popularity.desc&${API_KEY}&page=1`;
 function TvGrid() {
   const [tv, setTv] = useState([]);
 
